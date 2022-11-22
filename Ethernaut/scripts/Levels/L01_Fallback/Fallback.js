@@ -3,10 +3,9 @@ const addresses = require('../Addresses.json')
 
 async function main() {
     const scriptName = path.basename(__filename, '.js');
-    console.log('----------', scriptName, '----------')
+    console.log('----------', scriptName, '----------');
 
     const accounts = await ethers.getSigners();
-    const sender = accounts[0];
     
     const fallbackAddress = addresses[scriptName];
     const fallbackContract = await ethers.getContractAt("IFallback", fallbackAddress);

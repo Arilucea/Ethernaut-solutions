@@ -9,10 +9,6 @@ module.exports = {
   solidity: {
     version: "0.8.17",
     settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
     },
   },
   networks: {
@@ -22,7 +18,7 @@ module.exports = {
     },
     mumbai: {
         url: process.env.MUMBAI_URL,
-        accounts: [process.env.SECRET_M]
+        accounts: [process.env.SECRET_M, process.env.SECRET_M_2]
     },
     },
 };
