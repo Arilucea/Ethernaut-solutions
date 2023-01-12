@@ -13,7 +13,7 @@ async function main() {
 
     const txGoToFloor = await contract.goToFloor(20, elevatorAddress);
 
-    console.log('----------End----------');
+    console.log('----------End----------', txGoToFloor.hash);
 }
 
 main().catch((error) => {

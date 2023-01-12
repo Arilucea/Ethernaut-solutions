@@ -17,7 +17,7 @@ async function main() {
 
     const txClaimTelephone = await contract.claimTelephone(sender.address);
 
-    console.log('----------End----------');
+    console.log('----------End----------', txClaimTelephone.hash);
 }
 
 

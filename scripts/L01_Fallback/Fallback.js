@@ -14,7 +14,7 @@ async function main() {
     const txContractClaim = await sender.sendTransaction({to: fallbackAddress, value: 1})
     const txWithdraw = await fallbackContract.withdraw();
 
-    console.log('----------End----------');
+    console.log('----------End----------', txWithdraw.hash);
 }
 
 main().catch((error) => {

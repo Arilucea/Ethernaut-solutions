@@ -15,7 +15,7 @@ async function main() {
 
     const txFallback = await sender.sendTransaction({to: delegationAddress, data: functionSig, gasLimit: 60000});
 
-    console.log('----------End----------');
+    console.log('----------End----------', txFallback.hash);
 }
 
 main().catch((error) => {

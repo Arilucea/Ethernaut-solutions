@@ -18,7 +18,7 @@ async function main() {
 
     const txCallKing = await contract.callKing(kingAddress, {value: prize+1});
 
-    console.log('----------End----------');
+    console.log('----------End----------', txCallKing.hash);
 }
 
 main().catch((error) => {

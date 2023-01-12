@@ -19,7 +19,7 @@ async function main() {
 
     const txGetFunds = await contract.withdraw();
 
-    console.log('----------End----------');
+    console.log('----------End----------', txGetFunds.hash);
 }
 
 main().catch((error) => {

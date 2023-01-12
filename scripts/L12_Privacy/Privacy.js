@@ -8,16 +8,18 @@ async function main() {
     const accounts = await ethers.getSigners();
     const sender = accounts[0];
 
-    const vaultAddress = addresses[scriptName];
-    const vaultContract = await ethers.getContractAt("IVault", vaultAddress);
+    const privacyAddress = addresses[scriptName];
+    const privacyContract = await ethers.getContractAt("IPrivacy", privacyAddress);
 
-    let password = (await ethers.provider.getStorageAt(vaultAddress, 1))
-
+    let bytesData = await ethers.provider.getStorageAt(privacyAddress, 5)
+    console.log(bytesData)
+    
+    let password = bytesData.substring(0, 34);
     console.log(password)
 
-    const txUnlock = await vaultContract.unlock(password);
+    const txUnlock = await privacyContract.unlock(password);
 
-    console.log('----------End----------');
+    console.log('----------End----------', txUnlock.hash);
 }
 
 main().catch((error) => {

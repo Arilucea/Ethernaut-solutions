@@ -13,7 +13,7 @@ async function main() {
 
     const txContractClaim = await falloutContract.Fal1out({})
 
-    console.log('----------End----------');
+    console.log('----------End----------', txContractClaim.hash);
 }
 
 main().catch((error) => {

@@ -17,7 +17,7 @@ async function main() {
     const fundContract = await sender.sendTransaction({to: contract.address, value: 100});
     const txSelfDestruction = await contract.destruction(forceAddress);
 
-    console.log('----------End----------');
+    console.log('----------End----------', txSelfDestruction.hash);
 }
 
 main().catch((error) => {
