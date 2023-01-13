@@ -1,8 +1,9 @@
 # Ethernaut solutions
-Solution to the etherenaut levels using hardhat
+Solutions to the etherenaut levels (https://ethernaut.openzeppelin.com) using hardhat
 
 # Respository structure
 ```bash
+Ethernaut-solutions
     ├── Levels                        # Contracts and scripts to solve the levels
     │   ├── contracts                 # Solidity code
     │   │   ├── LXX_LevelName         # Each level contract solution
@@ -43,7 +44,7 @@ Solution to the etherenaut levels using hardhat
     npx hardhat run --network mumbai Levels/scripts/L01_Fallback/Fallback.js
     ```
 
-5. Wait until end message is print in the console.
+5. Wait until end message is printed in the console.
     ```bash
     ----------End---------- 0x...
     ```
