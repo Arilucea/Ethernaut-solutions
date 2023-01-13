@@ -20,5 +20,11 @@ module.exports = {
         url: process.env.MUMBAI_URL,
         accounts: [process.env.SECRET_M, process.env.SECRET_M_2]
     },
-    },
+  },
+  paths: {
+    sources: "./Levels/contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
 };
